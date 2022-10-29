@@ -59,7 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 TextFormField(
                     controller: emailController,
-                    keyboardType: TextInputType.name,
+                    keyboardType: TextInputType.emailAddress,
                     decoration: const InputDecoration(
                       hintText: 'ex: marklouie@gmail.com ',
                       labelText: 'Enter your email address',
@@ -75,7 +75,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     }),
                 TextFormField(
                     controller: numController,
-                    keyboardType: TextInputType.name,
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                       hintText: 'ex: 094512349427 ',
                       labelText: 'Enter your phone number',
@@ -98,7 +98,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     validator: (value) {
                       if (value!.isEmpty ||
-                          !RegExp(r'^[a-z A-Z.]+$').hasMatch(value)) {
+                          !RegExp(r'^[a-z A-Z.,-]+$').hasMatch(value)) {
                         return 'Please enter correct birthday';
                       } else {
                         return null;
@@ -106,7 +106,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     }),
                 TextFormField(
                     controller: ageController,
-                    keyboardType: TextInputType.name,
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                       hintText: 'ex: 20 ',
                       labelText: 'Enter your age',
@@ -123,7 +123,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     controller: sectionController,
                     keyboardType: TextInputType.name,
                     decoration: const InputDecoration(
-                      hintText: 'ex: BSIT-3R1 ',
+                      hintText: 'ex: 3R1 ',
                       labelText: 'Enter your section',
                     ),
                     validator: (value) {

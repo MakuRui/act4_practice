@@ -11,14 +11,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late List studentList;
   late List count = [];
-//  late List name = studentList[0];
-//  late List emailAdd = studentList[1];
- // late List phoneNum = studentList[2];
-// late List birthDay = studentList[3];
-//  late List age = studentList[4];
- // late List section = studentList[5];
- // late List course = studentList[6];
-  //late List facebook = studentList[7];
 
   @override
   void initState() {
@@ -53,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                                 count.removeAt(index);
                               });
                             }, icon: const Icon(Icons.delete)),
-                        title: Text(index.toString()),
+                        title: Text(studentList[0]),
                         children: [
                           SizedBox(
                             height: 150,
